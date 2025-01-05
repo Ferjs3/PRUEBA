@@ -1,0 +1,282 @@
+@font-face {
+    font-family: press;
+    src: url(./font/HorndoBeckerRegular/HorndonBeckerRegular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  /* header*/
+  header {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  nav {
+    width: 100%;
+    position: relative;
+  }
+  
+  .header-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nombre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+    width: 100%;
+  }
+  
+  .titulo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .titulo, li {
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.titulo:hover, li:hover {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    -moz-transform: translate(0px, 5px);
+}
+.opciones:hover{
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.247);
+}
+  .logo {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/Press/img/logo.jpg);
+  }
+  
+  .titulo p {
+    font-size: 3rem;
+    font-family: 'press';
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #141414;
+    transition: max-height 0.5s ease;
+    list-style: none;
+  }
+  
+  .opciones {
+    font-size: 1.5rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .icono {
+    display: none;
+  }
+  
+  .check {
+    display: none;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .icono {
+      display: block;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  
+    .nav {
+      flex-direction: column;
+      position: absolute;
+      top: 60px; 
+      left: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+  
+    .check:checked ~ .header-container .nav {
+      max-height: 300px; 
+    }
+  
+    .opciones {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .check {
+      display: none;
+    }
+  }
+  
+  /* footer */
+  footer {
+    text-align: center;
+    background-color: #141414;
+    color: white;
+
+  }
+  .navf {
+    width: 100%;
+    height: 10vh;
+    margin-top: 1%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+
+  }
+  .foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 80%;
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+  }
+  .foot a{
+    display: flex;
+    flex-direction: column;
+  }
+  .foot:hover{
+    transform: scale3d(1.2, 1.2, 0.3);
+        -webkit-transform: scale3d(1.2, 1.2, 0.3);
+        -moz-transform: scale3d(1.2, 1.2, 0.3);
+}
+  .foot i{
+    font-size: 3em;
+  }
+  @media (max-width: 768px){
+    .navf{
+      flex-direction: column;
+      height: auto;
+      padding: 5%;
+    }
+    .foot{
+      margin: 2%;
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.hero {
+  width: 80%;
+  height: 80vh;
+  background-image: url(/Press/img/fondo/1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*.hero p {
+  color: white;
+  font-size: 3em;
+  background-color: rgba(0, 0, 0, 0.712);
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}*/
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60vh;
+}
+.text {
+  width: 30%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 50px;
+}
+.text h1 {
+  display: flex;
+  margin-bottom: 5%;
+}
+.press{
+  margin-left: 10px;
+  font-family: 'press';
+}
+.image {
+  width: 30%;
+  height: 60%;
+  background-size:contain;
+  background-repeat: no-repeat;
+  animation: changeBackground 25s infinite;
+}
+  
+@keyframes changeBackground {
+    0%   { background-image: url('/Press/img/fondo/8.webp'); }
+    20%  { background-image: url('/Press/img/fondo/7.webp'); }
+    40%  { background-image: url('/Press/img/fondo/6.webp'); }
+    60% { background-image: url('/Press/img/fondo/5.webp'); }
+    80% { background-image: url('/Press/img/fondo/4.webp'); }
+    100% { background-image: url('/Press/img/fondo/3.webp'); }
+}
+.banda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60vh;
+}
+.integrantes{
+  width: 20%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.image2{
+  width: 20%;
+  height: 60%;
+  background-image: url(/Press/img/logo.jpg);
+  background-size:contain;
+  background-repeat: no-repeat;
+
+}
+.music {
+  margin-top: 15px;
+  background-color: orange;
+}
