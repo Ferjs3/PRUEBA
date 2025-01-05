@@ -9,6 +9,9 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
+  body{
+    margin: 0;
+  }
   /* header*/
   header {
     background-color: gray;
@@ -63,7 +66,7 @@
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/Press/img/logo.jpg);
+    background-image: url(/img/logo.jpg);
   }
   
   .titulo p {
@@ -140,12 +143,14 @@
     text-align: center;
     background-color: #141414;
     color: white;
+    margin: 0;
 
   }
   .navf {
     width: 100%;
     height: 10vh;
     margin-top: 1%;
+    margin-bottom: 0;
     background-color: red;
     display: flex;
     justify-content: center;
@@ -197,7 +202,7 @@
 .hero {
   width: 80%;
   height: 80vh;
-  background-image: url(/Press/img/fondo/1.jpg);
+  background-image: url(/img/fondo/1.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -245,12 +250,12 @@
 }
   
 @keyframes changeBackground {
-    0%   { background-image: url('/Press/img/fondo/8.webp'); }
-    20%  { background-image: url('/Press/img/fondo/7.webp'); }
-    40%  { background-image: url('/Press/img/fondo/6.webp'); }
-    60% { background-image: url('/Press/img/fondo/5.webp'); }
-    80% { background-image: url('/Press/img/fondo/4.webp'); }
-    100% { background-image: url('/Press/img/fondo/3.webp'); }
+    0%   { background-image: url('/img/fondo/8.webp'); }
+    20%  { background-image: url('/img/fondo/7.webp'); }
+    40%  { background-image: url('/img/fondo/6.webp'); }
+    60% { background-image: url('/img/fondo/5.webp'); }
+    80% { background-image: url('/img/fondo/4.webp'); }
+    100% { background-image: url('/img/fondo/3.webp'); }
 }
 .banda {
   display: flex;
@@ -271,12 +276,17 @@
 .image2{
   width: 20%;
   height: 60%;
-  background-image: url(/Press/img/logo.jpg);
+  background-image: url(/img/logo.jpg);
   background-size:contain;
   background-repeat: no-repeat;
 
 }
 .music {
+  width: 80%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: 15px;
   background-color: orange;
 }
